@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from perfis.models import Perfil
+from django.shortcuts import redirect
 
 def index(request):
 	return render(request, 'index.html', {'perfis': Perfil.objects.all()})
